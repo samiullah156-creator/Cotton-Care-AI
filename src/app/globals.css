@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 56% 91%; /* Light Beige */
+    --foreground: 150 30% 10%; /* Darker Green Text */
+    --card: 60 56% 91%; /* Light Beige */
+    --card-foreground: 150 30% 10%; /* Darker Green Text */
+    --popover: 60 56% 91%; /* Light Beige */
+    --popover-foreground: 150 30% 10%; /* Darker Green Text */
+    --primary: 150 30% 17%; /* Deep Green */
+    --primary-foreground: 60 56% 95%; /* Light Beige/Off-white */
+    --secondary: 150 10% 85%; /* Lighter muted green/gray */
+    --secondary-foreground: 150 30% 17%; /* Deep Green */
+    --muted: 150 10% 88%; /* Very Light muted green/gray */
+    --muted-foreground: 150 15% 40%; /* Muted green/gray text */
+    --accent: 25 58% 40%; /* Earthy Orange */
+    --accent-foreground: 60 56% 95%; /* Light Beige/Off-white */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 10% 75%; /* Muted green/gray border */
+    --input: 150 10% 80%; /* Muted green/gray input background */
+    --ring: 25 58% 40%; /* Earthy Orange */
+    --chart-1: 150 30% 30%; /* Deep Green variations */
+    --chart-2: 150 30% 40%;
+    --chart-3: 25 58% 50%;  /* Earthy Orange variations */
+    --chart-4: 25 58% 60%;
+    --chart-5: 90 70% 60%;  /* Light Green Highlight */
+    --radius: 0.5rem;
+    --sidebar-background: 150 30% 17%; /* Deep Green */
+    --sidebar-foreground: 60 56% 95%; /* Light Beige/Off-white */
+    --sidebar-primary: 60 56% 95%; /* Light Beige/Off-white */
+    --sidebar-primary-foreground: 150 30% 17%; /* Deep Green */
+    --sidebar-accent: 25 58% 40%; /* Earthy Orange */
+    --sidebar-accent-foreground: 60 56% 95%; /* Light Beige/Off-white */
+    --sidebar-border: 150 30% 25%; /* Darker green border */
+    --sidebar-ring: 25 58% 40%; /* Earthy Orange */
+  }
+  .dark {
+    --background: 150 30% 8%; /* Very Dark Green */
+    --foreground: 60 56% 91%; /* Light Beige */
+    --card: 150 30% 8%; /* Very Dark Green */
+    --card-foreground: 60 56% 91%; /* Light Beige */
+    --popover: 150 30% 8%; /* Very Dark Green */
+    --popover-foreground: 60 56% 91%; /* Light Beige */
+    --primary: 60 56% 91%; /* Light Beige */
+    --primary-foreground: 150 30% 17%; /* Deep Green */
+    --secondary: 150 15% 15%; /* Dark muted green/gray */
+    --secondary-foreground: 60 56% 91%; /* Light Beige */
+    --muted: 150 15% 15%; /* Dark muted green/gray */
+    --muted-foreground: 150 10% 63%; /* Lighter muted green/gray text */
+    --accent: 25 58% 50%; /* Earthy Orange (slightly lighter for dark mode) */
+    --accent-foreground: 150 30% 10%; /* Darker Green Text */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 15% 20%; /* Dark muted green/gray border */
+    --input: 150 15% 20%; /* Dark muted green/gray input background */
+    --ring: 25 58% 50%; /* Earthy Orange */
+    --chart-1: 150 30% 60%; /* Lighter green variations */
+    --chart-2: 150 30% 70%;
+    --chart-3: 25 58% 60%;  /* Earthy Orange variations */
+    --chart-4: 25 58% 70%;
+    --chart-5: 90 70% 70%;  /* Lighter Green Highlight */
+    --sidebar-background: 150 30% 10%; /* Darker Green */
+    --sidebar-foreground: 60 56% 91%; /* Light Beige */
+    --sidebar-primary: 60 56% 91%; /* Light Beige */
+    --sidebar-primary-foreground: 150 30% 17%; /* Deep Green */
+    --sidebar-accent: 25 58% 50%; /* Earthy Orange */
+    --sidebar-accent-foreground: 150 30% 10%; /* Darker Green Text */
+    --sidebar-border: 150 15% 20%; /* Dark muted green/gray border */
+    --sidebar-ring: 25 58% 50%; /* Earthy Orange */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .loader {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    border: 4px solid hsl(var(--muted));
+    border-top-color: hsl(var(--primary));
+    display: inline-block;
+    animation: spin 800ms linear infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
